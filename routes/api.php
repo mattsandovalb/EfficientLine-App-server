@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CardController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Card;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,4 @@ use App\Models\Card;
 */
 
 
-Route::apiResource('cards'. \App\Http\Controllers\CardController::class);
+Route::apiResource('cards', CardController::class);

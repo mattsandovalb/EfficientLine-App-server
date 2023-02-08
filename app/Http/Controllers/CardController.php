@@ -49,9 +49,9 @@ class CardController extends Controller
      * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card, $id)
+    public function show(Card $card)
     {
-        $card = Card::find($id);
+     
         return $card;
     }
 
@@ -62,9 +62,9 @@ class CardController extends Controller
      * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Card $card, $id)
+    public function update(Request $request, Card $card)
     {
-        $card = Card::find($id);
+        
 
         $card->title = $request->title;
         $card->description = $request->description;
@@ -80,9 +80,9 @@ class CardController extends Controller
      * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Card $card, $id)
+    public function destroy(Card $card)
     {
-        $card = Card::find($id);
+      
 
         $card->delete();
 
